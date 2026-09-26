@@ -80,8 +80,8 @@ The source code in this repository is released under the [MIT License](LICENSE).
 
 ## Reproducibility record
 
-Every formal run records the random seed, dataset, fold, parameter configuration, candidate counts, runtime, and input/output hashes. The frozen results include provenance and SHA-256 manifests. The repository is prepared as release candidate `v1.0.0`; the persistent archive DOI will be added after the tagged release has been archived.
+Every formal run records the random seed, dataset, fold, parameter configuration, candidate counts, runtime, and input/output hashes. The frozen results include provenance and SHA-256 manifests. The manuscript-associated code is preserved in the tagged GitHub version `v1.0.0`.
 
 ## Citation
 
-Citation metadata are provided in `CITATION.cff`. Until the manuscript record and archive DOI are available, cite the repository URL together with the accompanying manuscript title.
+Citation metadata are provided in `CITATION.cff`. Cite the tagged repository version together with the accompanying manuscript title.
