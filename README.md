@@ -74,6 +74,10 @@ The MDGCN and MCDR runners import the authors' official implementations rather t
 
 The case-study scripts produce hypotheses for manual review. Keyword or indication overlap in the reviewed workbook must not be described as experimental, clinical, or literature confirmation of a therapeutic association.
 
+## License
+
+The source code in this repository is released under the [MIT License](LICENSE). The benchmark datasets retain the terms and attribution requirements of their original providers; redistribution here does not replace those original terms.
+
 ## Reproducibility record
 
 Every formal run records the random seed, dataset, fold, parameter configuration, candidate counts, runtime, and input/output hashes. The frozen results include provenance and SHA-256 manifests. The repository is prepared as release candidate `v1.0.0`; the persistent archive DOI will be added after the tagged release has been archived.
