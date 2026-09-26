@@ -4,7 +4,7 @@ This repository accompanies the manuscript **IHWKNN: An Iterative Hybrid Weighte
 
 Repository: https://github.com/wuzhimrbeen/IHWKNN
 
-It contains the IHWKNN implementation, eight public benchmark archives, frozen revision results, and the experiment runners used for the common candidate-space evaluation, entity-level cold start, local leave-one-dataset-out assessment, stopping-rule controls, parameter analysis, ablation, final-model case study, and baseline comparisons.
+It contains the IHWKNN implementation, eight public benchmark archives, frozen revision results, and the experiment runners used for the common candidate-space evaluation, entity-level cold start, local leave-one-dataset-out assessment, stopping-rule controls, parameter analysis, ablation, and baseline comparisons.
 
 ## Repository layout
 
@@ -17,7 +17,6 @@ It contains the IHWKNN implementation, eight public benchmark archives, frozen r
 - `experiments/stopping_comparison/`: boundary, fixed-depth, validation-selected, and convergence stopping controls.
 - `experiments/parameter_selection_ablation/`: joint parameter search, K/alpha refinement, and component ablation.
 - `experiments/new_baseline/`: common-protocol runners for DR-DDA, SCMFDD, CDPMF-DDA, AdaDR, MDGCN, and MCDR.
-- `experiments/final_case_study/`: final-model candidate ranking and workbook construction.
 - `results/`: frozen machine-readable tables used for the revised manuscript.
 
 ## Environment
@@ -57,7 +56,6 @@ python experiments/cold_start/code/run_cold_start.py --dataset Cdataset --mode b
 python experiments/lodo_transfer/code/run_local_grid.py --dataset Cdataset
 python experiments/stopping_comparison/code/run_stopping_comparison.py --dataset Cdataset
 python experiments/parameter_selection_ablation/code/run_comprehensive_ablation.py --help
-python experiments/final_case_study/code/generate_final_top15.py --help
 ```
 
 The frozen files in `results/` allow every manuscript number to be audited without rerunning computationally expensive searches.
@@ -69,10 +67,6 @@ The MDGCN and MCDR runners import the authors' official implementations rather t
 ## Candidate protocols and metrics
 
 `full_unknown` ranks each fold's held-out positives against every pair recorded as zero in the original matrix and is the primary protocol. The ratio protocols are deterministic nested sensitivity samples. The reported measures are AUC, AUPR, descriptive F1max, Recall@P, drug-macro mAP@10, and NDCG@P. Recorded-zero entries are unlabeled candidates, not experimentally confirmed negatives.
-
-## Case-study interpretation
-
-The case-study scripts produce hypotheses for manual review. Keyword or indication overlap in the reviewed workbook must not be described as experimental, clinical, or literature confirmation of a therapeutic association.
 
 ## License
 

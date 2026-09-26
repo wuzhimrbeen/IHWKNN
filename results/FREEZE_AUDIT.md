@@ -11,4 +11,3 @@
 - Training-zero exclusion sensitivity: 5 supervised comparators, 8/8 datasets complete for each.
 - MDGCN stochasticity audit: 8/8 datasets and 80/80 folds complete, with five forward passes per fitted checkpoint.
 - Sensitivity queues reported no failed datasets.
-- Case-study outputs are not part of this freeze.

@@ -1,4 +1,4 @@
-# Frozen numerical inputs for the pre-case-study revision
+# Frozen numerical inputs for the revision
 
 These files are the only numerical sources permitted for the current manuscript tables and claims. They preserve the seven-method, eight-dataset, ten-fold, five-candidate-protocol comparison and the additional IHWKNN analyses.
 
@@ -26,5 +26,3 @@ These files are the only numerical sources permitted for the current manuscript 
 - `sensitivity_coverage.csv`: formal completion audit for every method and dataset.
 
 Both formal sensitivity queues completed without failures. These files do not overwrite the primary comparison; they test whether two implementation details materially change its interpretation.
-
-Case-study outputs are excluded from this freeze because final-configuration biological verification remains pending.
