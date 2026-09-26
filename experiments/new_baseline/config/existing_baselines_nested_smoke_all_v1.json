@@ -1,0 +1,27 @@
+{
+  "run_id": "existing_baselines_nested_smoke_all_v1",
+  "implementation_status": "local_reconstruction_nested_common_protocol",
+  "methods": [
+    "DRDDA",
+    "SCMFDD",
+    "CDPMFDDA"
+  ],
+  "seed": 42,
+  "outer_protocol": "frozen Day-2 seed-42 positive folds and candidate IDs",
+  "inner_protocol": "deterministic 10% split of outer-training positives; validation candidates use 1:10 original-zero sample",
+  "selection_order": "inner AUPRC descending, inner AUROC descending, config_id ascending",
+  "training_unlabeled": "sampled only from original-zero pairs; no known association is used as a negative",
+  "drdda_residual_beta": "fixed at 0.5 and excluded from search because it cancels algebraically",
+  "baseline_source": "E:\\论文\\代码\\02_experiment_project\\src\\baselines\\baseline_methods.py",
+  "baseline_source_sha256": "a1ae5e67500b3b4a79a7d399f19a9672fa4cff0a7406839d8231c32625883aa2",
+  "ratios": [
+    1,
+    5,
+    10,
+    50
+  ],
+  "max_folds": 1,
+  "smoke": true,
+  "created_at_utc": "2026-09-18T03:30:31.411334+00:00",
+  "manifest_hash": "5a8394c2806592dedb9c1c6f75da4631f30dfd761a1857289a7f21c89032a254"
+}

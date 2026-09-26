@@ -1,0 +1,35 @@
+{
+  "run_id": "stopping_threshold_probe",
+  "seed": 42,
+  "folds": 10,
+  "parameters": {
+    "K": 120,
+    "lambda": 0.5,
+    "gamma": 0.1,
+    "beta": 0.3,
+    "alpha": 4.0
+  },
+  "fixed_iterations": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "support_thresholds": [
+    0.0,
+    0.0001,
+    0.001,
+    0.01,
+    0.05
+  ],
+  "convergence_tolerances": [
+    0.1,
+    0.05,
+    0.01
+  ],
+  "max_iterations": 12,
+  "evaluation": "frozen full-unknown candidate sets from Day 2",
+  "created_at_utc": "2026-09-17T13:46:05.057462+00:00",
+  "config_hash": "b536577ebe5a57cc345d3441ea2bfb76b0abbebb84a0c10c146ee397bb010676"
+}

@@ -1,0 +1,28 @@
+{
+  "run_id": "day2_full_candidates_seed42",
+  "experiment_group": "evaluation_full_candidates",
+  "source_root": "E:\\论文\\IHWKNN_submission_code",
+  "data_dir": "E:\\论文\\代码\\01newdata",
+  "datasets": "all",
+  "folds": 10,
+  "seed": 42,
+  "ratios": [
+    1,
+    5,
+    10,
+    50
+  ],
+  "parameters": {
+    "k": 120,
+    "lambda": 0.5,
+    "gamma": 0.1,
+    "beta": 0.3,
+    "alpha": 4.0,
+    "max_iterations": 200
+  },
+  "metric_scope": "per_fold_then_dataset_mean",
+  "f1max_status": "descriptive_oracle_using_fold_test_labels",
+  "top_rank_reporting": "recall_at_p_only; precision_at_p and f1_at_p omitted as algebraically identical when k=p",
+  "created_at_utc": "2026-09-17T05:35:33.085893+00:00",
+  "config_hash": "0da1230c16780d923478677b5a70d51f390fdbabd3b9a2fec71827b434d1df9e"
+}

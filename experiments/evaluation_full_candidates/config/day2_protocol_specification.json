@@ -1,0 +1,29 @@
+{
+  "experiment_group": "evaluation_full_candidates",
+  "date": "2026-09-17",
+  "reviewer_items": ["R2-Major 3", "R2-Minor 4", "R2-Minor 5"],
+  "datasets": ["Cdataset", "Fdataset", "LRSSL", "Ydataset", "LAGCN", "SCMFDDL", "iDrug", "TLHGBI"],
+  "folds": 10,
+  "split_seed": 42,
+  "candidate_protocols": ["full_unknown", "1:1", "1:5", "1:10", "1:50"],
+  "candidate_semantics": "All original zero entries are unlabeled candidates, not confirmed negatives.",
+  "fold_aggregation": "Compute every metric within each fold and report the ten-fold mean and sample SD per dataset.",
+  "model_parameters": {"K": 120, "lambda": 0.5, "gamma": 0.1, "beta": 0.3, "alpha": 4},
+  "metrics": {
+    "primary": ["AUC", "AUPR"],
+    "descriptive": ["F1max", "F1max threshold"],
+    "ranking": ["Recall@P", "drug-macro mAP@10", "NDCG@P"],
+    "omitted_as_redundant_when_K_equals_P": ["Precision@P", "F1@P"]
+  },
+  "metric_reference": {
+    "citation_key": "Wang2022SpringD2A",
+    "doi": "10.1093/bioinformatics/btab820",
+    "use": "Drug-centric ranking of held-out associations with unknown disease candidates and reporting of AUPR and mAP@10."
+  },
+  "leakage_controls": [
+    "Held-out positives are zeroed before association-induced similarities are computed.",
+    "Unlabeled candidates are selected only from original zeros.",
+    "The 1:1 set exactly reuses the formal submitted evaluation sample; 1:5, 1:10, and 1:50 are deterministic nested extensions.",
+    "Training positives are excluded from every evaluation candidate set."
+  ]
+}

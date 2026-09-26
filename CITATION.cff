@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying manuscript and the archived software release."
+title: "IHWKNN: Iterative Hybrid Weighted K-Nearest Neighbor for Drug-Disease Association Prediction"
+type: software
+version: 1.0.0
+date-released: 2026-09-26
+repository-code: "https://github.com/wuzhimrbeen/IHWKNN"
+authors:
+  - family-names: "Wu"
+    given-names: "Zhi"
+  - family-names: "Zainudin"
+    given-names: "Suhaila"
+  - family-names: "Mohd Daud"
+    given-names: "Kauthar"

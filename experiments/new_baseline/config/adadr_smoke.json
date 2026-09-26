@@ -1,0 +1,24 @@
+{
+  "run_id": "adadr_smoke",
+  "method": "AdaDR mechanism-preserving adapted implementation",
+  "official_repository_commit": "475b896ec81a1c41a7cbe996574ac13ecdf1b3a8",
+  "official_paper_doi": "10.1093/bioinformatics/btad748",
+  "status": "adapted_not_verified_official_reproduction",
+  "seed": 42,
+  "epochs": 3,
+  "patience": 2,
+  "learning_rate": 0.0001,
+  "ratios": [
+    1,
+    5,
+    10,
+    50
+  ],
+  "device": "cuda",
+  "max_folds": 1,
+  "outer_folds": "same seed-42 held-out positives and candidate IDs as Day 2",
+  "inner_validation": "deterministic 10% of outer-training positives; matched original-zero sample",
+  "training_unlabeled_note": "sampled original-zero pairs used as optimization negatives remain members of the full-unknown candidate universe and are audited",
+  "created_at_utc": "2026-09-17T13:49:35.552854+00:00",
+  "config_hash": "46befeedad647a37e40c7cc4f2bbe08169ec76bc1a1e43a2b1f08c42f2348de2"
+}

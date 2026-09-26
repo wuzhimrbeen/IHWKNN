@@ -1,0 +1,24 @@
+{
+  "run_id": "adadr_training_negative_sensitivity_seed42_v1",
+  "method": "AdaDR-inspired structural adapter",
+  "official_repository_commit": "475b896ec81a1c41a7cbe996574ac13ecdf1b3a8",
+  "official_paper_doi": "10.1093/bioinformatics/btad748",
+  "status": "adapted_not_verified_official_reproduction",
+  "seed": 42,
+  "epochs": 200,
+  "patience": 20,
+  "learning_rate": 0.0001,
+  "ratios": [
+    1,
+    5,
+    10,
+    50
+  ],
+  "device": "cuda",
+  "max_folds": 10,
+  "outer_folds": "same seed-42 held-out positives and candidate IDs as Day 2",
+  "inner_validation": "deterministic 10% of outer-training positives; matched original-zero sample",
+  "training_unlabeled_note": "sampled original-zero pairs used as optimization negatives remain members of the full-unknown candidate universe and are audited",
+  "created_at_utc": "2026-09-22T17:35:07.172667+00:00",
+  "config_hash": "79ac2eba8cb0972f2f1f02cb59177338d074e3e4c79b004028bc852350b7d524"
+}

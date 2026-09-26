@@ -1,0 +1,15 @@
+{
+  "experiment_group": "lodo_transfer",
+  "reviewer_items": ["R2-Major 1", "R2-Minor 2"],
+  "selection_protocol": "Leave one target dataset out; select only from the other seven datasets.",
+  "candidate_protocol": "full_unknown",
+  "selection_order": ["mean AUC descending", "mean AUPR descending", "mean drug-macro mAP@10 descending", "distance from submitted final configuration ascending", "config ID ascending"],
+  "joint_local_grid": {
+    "K": [120], "alpha": [4],
+    "lambda": [0.3, 0.5, 0.7], "gamma": [0.0, 0.1, 0.2], "beta": [0.1, 0.3, 0.5]
+  },
+  "K_axis_additions": [90, 100, 110, 140, 160],
+  "alpha_axis_additions": [2, 8],
+  "unique_configuration_count": 34,
+  "interpretation_limit": "Local LODO evidence around the selected operating point; not a full five-parameter nested global search."
+}

@@ -1,0 +1,31 @@
+{
+  "run_id": "validation_stopping_seed42_v1",
+  "seed": 42,
+  "selection_scope": "inside each outer training fold",
+  "validation_positive_fraction": 0.1,
+  "validation_unlabeled_ratio": 10,
+  "selection_metric_order": [
+    "AUPR descending",
+    "AUC descending",
+    "iteration ascending"
+  ],
+  "candidate_test_protocol": "frozen Day-2 full_unknown",
+  "parameters": {
+    "K": 120,
+    "lambda": 0.5,
+    "gamma": 0.1,
+    "beta": 0.3
+  },
+  "iteration_candidates": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "run_id": "day2_full_candidates_map10_seed42",
+  "experiment_group": "evaluation_full_candidates",
+  "source_root": "E:\\论文\\IHWKNN_submission_code",
+  "data_dir": "E:\\论文\\代码\\01newdata",
+  "datasets": "all",
+  "folds": 10,
+  "seed": 42,
+  "ratios": [
+    1,
+    5,
+    10,
+    50
+  ],
+  "parameters": {
+    "k": 120,
+    "lambda": 0.5,
+    "gamma": 0.1,
+    "beta": 0.3,
+    "alpha": 4.0,
+    "max_iterations": 200
+  },
+  "metric_scope": "per_fold_then_dataset_mean",
+  "f1max_status": "descriptive_oracle_using_fold_test_labels",
+  "top_rank_reporting": "recall_at_p, drug-macro mAP@10, and NDCG@P; precision_at_p and f1_at_p omitted as algebraically identical when k=p; MRR omitted because it saturates with many held-out positives",
+  "created_at_utc": "2026-09-17T09:24:17.053968+00:00",
+  "config_hash": "76b9df532bcc288ebf42754c29509eb1b23d8c3b7178388f2e426b8fd0a6a1a4"
+}
