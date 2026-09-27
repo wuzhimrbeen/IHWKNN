@@ -12,7 +12,8 @@ import numpy as np
 import pandas as pd
 
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+EXPERIMENT_ROOT = PROJECT_ROOT / "experiments" / "primary_evaluation_submitted"
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
@@ -26,7 +27,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=PROJECT_ROOT / "1. 10-fold cross-validation" / "results" / "final_ihwknn",
+        default=EXPERIMENT_ROOT / "results" / "final_ihwknn",
     )
     parser.add_argument("--dataset", default=None)
     parser.add_argument("--folds", type=int, default=10)

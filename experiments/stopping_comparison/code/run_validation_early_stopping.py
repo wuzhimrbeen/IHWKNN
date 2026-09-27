@@ -33,7 +33,8 @@ def parse_args():
 
 
 def configure():
-    for path in (SOURCE, SOURCE / "1. 10-fold cross-validation" / "code", DAY2 / "code"):
+    primary_code = SOURCE / "experiments" / "primary_evaluation_submitted" / "code"
+    for path in (SOURCE, primary_code, DAY2 / "code"):
         if str(path) not in sys.path:
             sys.path.insert(0, str(path))
     import reassessment_utils as ru  # noqa: PLC0415

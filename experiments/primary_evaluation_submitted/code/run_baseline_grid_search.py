@@ -19,7 +19,8 @@ import numpy as np
 import pandas as pd
 from sklearn.metrics import average_precision_score, roc_auc_score
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
+PROJECT_ROOT = Path(__file__).resolve().parents[3]
+EXPERIMENT_ROOT = PROJECT_ROOT / "experiments" / "primary_evaluation_submitted"
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
@@ -47,11 +48,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--data-dir", default=str(PROJECT_ROOT / "data"))
     parser.add_argument(
         "--output-dir",
-        default=str(PROJECT_ROOT / "1. 10-fold cross-validation" / "results" / "baseline_grid"),
+        default=str(EXPERIMENT_ROOT / "results" / "baseline_grid"),
     )
     parser.add_argument(
         "--protocol-dir",
-        default=str(PROJECT_ROOT / "1. 10-fold cross-validation" / "results" / "shared_protocol"),
+        default=str(EXPERIMENT_ROOT / "results" / "shared_protocol"),
     )
     parser.add_argument("--dataset", default=None)
     parser.add_argument("--exclude-dataset", action="append", default=[])

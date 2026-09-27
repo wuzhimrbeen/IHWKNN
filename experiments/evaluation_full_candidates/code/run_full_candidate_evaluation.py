@@ -178,7 +178,13 @@ def main() -> None:
         "runner": file_hash(Path(__file__)),
         "protocol": file_hash(HERE / "evaluation_protocol.py"),
         "model": file_hash(args.source_root / "src" / "model" / "ihwknn.py"),
-        "reassessment": file_hash(args.source_root / "1. 10-fold cross-validation" / "code" / "reassessment_utils.py"),
+        "reassessment": file_hash(
+            args.source_root
+            / "experiments"
+            / "primary_evaluation_submitted"
+            / "code"
+            / "reassessment_utils.py"
+        ),
     })
     selected_names = set(args.dataset)
     dataset_dirs = [
